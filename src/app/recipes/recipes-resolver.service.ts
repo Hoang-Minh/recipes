@@ -7,7 +7,7 @@ import {
 import { Observable } from 'rxjs';
 import { DataStorageSerivce } from '../shared/data-storage.service';
 import { Recipe } from './recipe.model';
-import { RecipeServie } from './recipe.service';
+import { RecipeService } from './recipe.service';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,7 @@ import { RecipeServie } from './recipe.service';
 export class RecipesResolverService implements Resolve<Recipe[]> {
   constructor(
     private dataStorageService: DataStorageSerivce,
-    private recipeService: RecipeServie
+    private recipeService: RecipeService
   ) {}
   resolve(
     route: ActivatedRouteSnapshot,

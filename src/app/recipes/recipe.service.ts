@@ -7,7 +7,7 @@ import { Recipe } from './recipe.model';
 @Injectable({
   providedIn: 'root',
 })
-export class RecipeServie {
+export class RecipeService {
   // recipeSelected = new Subject<Recipe>();
   recipeChanged = new Subject<Recipe[]>();
 
@@ -35,6 +35,7 @@ export class RecipeServie {
   }
 
   getRecipes() {
+    console.log('this.recipes', this.recipes);
     return this.recipes.slice(); // return a copy of recipes
   }
 
